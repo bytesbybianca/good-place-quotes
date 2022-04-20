@@ -1,0 +1,138 @@
+/* Color scheme
+https://www.gannett-cdn.com/-mm-/ab5f4dbdc006387b75b116df2ce0070f194bf46c/c=1-0-638-360/local/-/media/2016/10/17/CarolinaGroup/Anderson/636123110935324264-the-good-place.jpg?width=637&height=360&fit=crop&format=pjpg&auto=webp */
+
+/* https://flxt.tmsimg.com/assets/p15651966_b1t_v9_aa.jpg */
+
+/* https://www.refactoringui.com/img/previews/whats-in-a-color-palette-01.png */
+
+/*  */
+
+
+/******************************************
+/* CSS
+/*******************************************/
+
+/* Box Model Hack */
+*{
+  box-sizing: border-box;
+}
+
+body *, html * {
+  margin: 0 0;
+  padding: 0 0;
+}
+
+.background {
+  background-image: url("../img/clouds-and-grass.jpeg");
+  background-size: cover;
+  background-position: 50vw;
+  display: flex;
+}
+
+.content, .characterMain {
+  width: 50vw;
+  height: 100vh;
+  padding: 3rem;
+}
+
+.content {
+  background-color: rgb(242, 239, 229);
+}
+
+
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+.content img{
+  display: block;
+  margin: 0 auto;
+  width: 120px;
+  height: 120px;
+}
+
+span {
+  display: block;
+}
+
+.characterThumbs {
+  margin: 2rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.square {
+  color: #549560;
+  background-color: white;
+}
+
+.square:hover {
+  transform: scale(1.1);
+  transition: .2s;
+  cursor: pointer;
+}
+
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
+
+body * {
+  font-family: 'Lato', sans-serif;
+}
+
+body {
+  background-size: cover;
+}
+
+h1 {
+  font-size: 4rem;
+  color: #3F6398;
+  margin: 0 0;
+}
+
+.quote {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.characterName {
+  font-size: 1.5rem;
+}
+
+.characterMain {
+  position: relative;
+}
+
+.characterMain img {
+  position: fixed;
+  bottom: 0;
+  right: 100px;
+  max-width: 50vh;
+
+ -webkit-filter:
+    drop-shadow(4px 4px 0 black)
+    drop-shadow(-4px -4px 0 white);
+  filter:
+    drop-shadow(4px 4px 0 black) 
+    drop-shadow(-4px -4px 0 white);
+
+}
+
+.content {
+  position: relative;
+}
+
+.quoteDisplay {
+  position: absolute;
+  left: 0;
+  background-color: #549560;
+  height: auto;
+  padding: 20px;
+  width: 90%;
+  padding-left: 50px;
+  margin-bottom: 30px;
+  border-radius: 0 10px 10px 0;
+}
