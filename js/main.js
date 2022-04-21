@@ -18,16 +18,26 @@ function getRandomURL() {
   getFetch(`random`)
 }
 
-// function photoSlideUp() {
-//   document.querySelector('.characterMain img').classList.remove('close');
-// }
+function quoteSlideDown() {
+  document.querySelector('.quoteDisplay').classList.add('closeQuote');
+  document.querySelector('.textDisplay').classList.remove('fadeIn');
 
+  
+  setTimeout(function() {
+    document.querySelector('.textDisplay').classList.add('fadeIn');
+  }, 1500)
+  setTimeout(function() {
+    document.querySelector('.quoteDisplay').classList.remove('closeQuote');
+  }, 1000)
+}
+
+// slide photo down
 function photoSlideDown() {
   document.querySelector('.characterMain img').classList.add('close');
-  document.querySelector('.quoteDisplay').classList.add('close');
+
+  // delay slide photo up
   setTimeout(function() {
     document.querySelector('.characterMain img').classList.remove('close')
-    document.querySelector('.quoteDisplay').classList.remove('close');
   }, 800)
 }
 
@@ -64,9 +74,9 @@ function getFetch(urlEnding){
     }
 
     setTimeout(function() {
-    // display quote and character name in DOM
-    document.querySelector('.quote').innerText = `"${dataFetched.quote}"`
-    document.querySelector('.characterName').innerText = `-${dataFetched.character}`
+      // display quote and character name in DOM
+      document.querySelector('.quote').innerText = `"${dataFetched.quote}"`
+      document.querySelector('.characterName').innerText = `-${dataFetched.character}`
     
       
       document.querySelector('.characterMain > img').src = 
@@ -78,9 +88,14 @@ function getFetch(urlEnding){
       dataFetched.character === 'Jason' ? `img/main-jason.png` :
       dataFetched.character === 'Pillboi' ? `img/main-pillboi.png` : 
       dataFetched.character === 'Derek' ? `img/main-derek.png` : ''
+
+      document.querySelector('.floating img').src = `img/shrimp.png`
       }, 600)
 
+    // call slide photo down every time new quote is displayed + delayed slide photo up
     photoSlideDown()
+    quoteSlideDown()
+
   })
   .catch(err => {
       console.log(`error ${err}`)
