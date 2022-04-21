@@ -62,14 +62,14 @@ function getFetch(urlEnding){
     
 
       document.querySelector('.characterMain > img').src = 
-      dataFetched.character === 'Eleanor' ? `img/eleanor1.png` :
-      dataFetched.character === 'Chidi' ? `img/chidi1.png` : 
-      dataFetched.character === 'Tahani' ? `img/tahani1.png` :
-      dataFetched.character === 'Michael' ? `img/michael1.png` : 
-      dataFetched.character === 'Janet' ? `img/janet1.png` : 
-      dataFetched.character === 'Jason' ? `img/jason2.png` :
-      dataFetched.character === 'Pillboi' ? `img/pillboi1.png` : 
-      dataFetched.character === 'Derek' ? `img/derek1.png` : ''
+      dataFetched.character === 'Eleanor' ? `img/main-eleanor.png` :
+      dataFetched.character === 'Chidi' ? `img/main-chidi.png` : 
+      dataFetched.character === 'Tahani' ? `img/main-tahani.png` :
+      dataFetched.character === 'Michael' ? `img/main-michael.png` : 
+      dataFetched.character === 'Janet' ? `img/main-janet.png` : 
+      dataFetched.character === 'Jason' ? `img/main-jason.png` :
+      dataFetched.character === 'Pillboi' ? `img/main-pillboi.png` : 
+      dataFetched.character === 'Derek' ? `img/main-derek.png` : ''
 
 
   })
