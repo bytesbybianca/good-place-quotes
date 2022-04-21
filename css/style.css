@@ -107,10 +107,13 @@ h1 {
 }
 
 .characterMain img {
-  position: fixed;
-  bottom: 0;
+  position: absolute;
   right: 100px;
-  max-width: 50vh;
+  bottom: 0;
+  transition: all .7s; 
+  transform: translate(0px, 0%);
+  /* max-width: 50vh; */
+
 
  -webkit-filter:
     drop-shadow(4px 4px 0 black)
@@ -121,13 +124,18 @@ h1 {
 
 }
 
+.characterMain .close {
+  transition: all .7s; 
+  transform: translate(0px, 110%);
+}
+
 .content {
   position: relative;
 }
 
 .quoteDisplay {
   position: absolute;
-  left: 0;
+  bottom: 0;
   background-color: #549560;
   height: auto;
   padding: 20px;
@@ -135,4 +143,11 @@ h1 {
   padding-left: 50px;
   margin-bottom: 30px;
   border-radius: 0 10px 10px 0;
+  transition: all .7s; 
+  transform: translate(0px, 0%);
+}
+
+.quoteDisplay .close {
+  transition: all .7s; 
+  transform: translate(0px, 200%);
 }

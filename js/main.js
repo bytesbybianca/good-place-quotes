@@ -18,6 +18,19 @@ function getRandomURL() {
   getFetch(`random`)
 }
 
+// function photoSlideUp() {
+//   document.querySelector('.characterMain img').classList.remove('close');
+// }
+
+function photoSlideDown() {
+  document.querySelector('.characterMain img').classList.add('close');
+  document.querySelector('.quoteDisplay').classList.add('close');
+  setTimeout(function() {
+    document.querySelector('.characterMain img').classList.remove('close')
+    document.querySelector('.quoteDisplay').classList.remove('close');
+  }, 800)
+}
+
 // fetch function
 function getFetch(urlEnding){
   let url = `https://good-place-quotes.herokuapp.com/api/${urlEnding}`
@@ -50,17 +63,12 @@ function getFetch(urlEnding){
       dataFetched = data
     }
 
+    setTimeout(function() {
     // display quote and character name in DOM
     document.querySelector('.quote').innerText = `"${dataFetched.quote}"`
     document.querySelector('.characterName').innerText = `-${dataFetched.character}`
-
-// read to slide image up
-// https://stackoverflow.com/questions/36316862/how-to-get-a-div-to-slide-up-from-the-bottom-of-the-page-using-css
-    // // set background image
-    // let bgImageUrl = data.image
-    // document.querySelector('body').style.backgroundImage = `url('${bgImageUrl}')`
     
-
+      
       document.querySelector('.characterMain > img').src = 
       dataFetched.character === 'Eleanor' ? `img/main-eleanor.png` :
       dataFetched.character === 'Chidi' ? `img/main-chidi.png` : 
@@ -70,14 +78,16 @@ function getFetch(urlEnding){
       dataFetched.character === 'Jason' ? `img/main-jason.png` :
       dataFetched.character === 'Pillboi' ? `img/main-pillboi.png` : 
       dataFetched.character === 'Derek' ? `img/main-derek.png` : ''
+      }, 600)
 
-
+    photoSlideDown()
   })
   .catch(err => {
       console.log(`error ${err}`)
   });
 
 }
+
 
 // getFetch()
 
