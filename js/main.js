@@ -42,10 +42,10 @@ function getFetch(urlEnding){
  
 
     let dataFetched
-    // selecting by character data object with character array 
+    // selecting by character data object with character array  (each character has more than one object)
     if(data.length) {
       dataFetched = data[charRandomIndex]
-    // selecting random returns a singly array
+    // selecting random returns a single array
     } else {
       dataFetched = data
     }
@@ -62,14 +62,14 @@ function getFetch(urlEnding){
     
 
       document.querySelector('.characterMain > img').src = 
-      dataFetched.character === 'Eleanor' ? `/img/eleanor1.png` :
-      dataFetched.character === 'Chidi' ? `/img/chidi1.png` : 
-      dataFetched.character === 'Tahani' ? `/img/tahani1.png` :
-      dataFetched.character === 'Michael' ? `/img/michael1.png` : 
-      dataFetched.character === 'Janet' ? `/img/janet1.png` : 
-      dataFetched.character === 'Jason' ? `/img/jason2.png` :
-      dataFetched.character === 'Pillboi' ? `/img/pillboi1.png` : 
-      dataFetched.character === 'Derek' ? `/img/derek1.png` : ''
+      dataFetched.character === 'Eleanor' ? `/Users/biancatogonon/Library/Mobile Documents/com~apple~CloudDocs/Desktop/web dev/100Devs/homework/due 0414/API - good place/img/eleanor1.png` :
+      dataFetched.character === 'Chidi' ? `/Users/biancatogonon/Library/Mobile Documents/com~apple~CloudDocs/Desktop/web dev/100Devs/homework/due 0414/API - good place/img/chidi1.png` : 
+      dataFetched.character === 'Tahani' ? `/Users/biancatogonon/Library/Mobile Documents/com~apple~CloudDocs/Desktop/web dev/100Devs/homework/due 0414/API - good place/img/tahani1.png` :
+      dataFetched.character === 'Michael' ? `/Users/biancatogonon/Library/Mobile Documents/com~apple~CloudDocs/Desktop/web dev/100Devs/homework/due 0414/API - good place/img/michael1.png` : 
+      dataFetched.character === 'Janet' ? `/Users/biancatogonon/Library/Mobile Documents/com~apple~CloudDocs/Desktop/web dev/100Devs/homework/due 0414/API - good place/img/janet1.png` : 
+      dataFetched.character === 'Jason' ? `/Users/biancatogonon/Library/Mobile Documents/com~apple~CloudDocs/Desktop/web dev/100Devs/homework/due 0414/API - good place/img/jason2.png` :
+      dataFetched.character === 'Pillboi' ? `/Users/biancatogonon/Library/Mobile Documents/com~apple~CloudDocs/Desktop/web dev/100Devs/homework/due 0414/API - good place/img/pillboi1.png` : 
+      dataFetched.character === 'Derek' ? `/Users/biancatogonon/Library/Mobile Documents/com~apple~CloudDocs/Desktop/web dev/100Devs/homework/due 0414/API - good place/img/derek1.png` : ''
 
 
   })
