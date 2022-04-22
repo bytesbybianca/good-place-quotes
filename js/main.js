@@ -7,6 +7,18 @@ square.forEach(character => character.addEventListener('click', function () {
   getCharacter(character.className.split(' ')[1]) // character name retrieved from class name
 }))
 
+// in mobile, exit quote
+document.querySelector('.exitQuote').addEventListener('click', mobileExitQuote)
+
+function mobileExitQuote() {
+    // quote display slides left/close
+    document.querySelector('.quoteDisplay').classList.add('closeQuote');
+    document.querySelector('.quote').classList.remove('fadeIn');
+    document.querySelector('.characterName').classList.remove('fadeIn');
+    // photo close
+    document.querySelector('.characterMain img').classList.add('close');
+}
+
 // runs fetch function by character clicked
 function getCharacter(characterChosen) {
   getFetch(`character/${characterChosen}`)
