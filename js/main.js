@@ -67,8 +67,6 @@ function getFetch(urlEnding){
     console.log(data)
     // console.log(data[r].character)
 
- 
-
     let dataFetched
     // selecting by character data object with character array  (each character has more than one object)
     if(data.length) {
@@ -95,11 +93,11 @@ function getFetch(urlEnding){
       dataFetched.character === 'Pillboi' ? `img/main-pillboi.png` : 
       dataFetched.character === 'Derek' ? `img/main-derek.png` : ''
       }, 600)
-      let currentCharacter
-      currentCharacter = dataFetched.character
-      console.log(dataFetched)
-      console.log(`lenght ${currentCharacter} =? ${dataFetched.character}`)
-      // console.log(dataFetched.prev())
+    
+      console.log(data.length)
+      console.log(data.index)
+
+      // document.querySelector('charArrLEngt')
 
     // call slide photo down every time new character/quote is chosen
     photoSlideDown()
