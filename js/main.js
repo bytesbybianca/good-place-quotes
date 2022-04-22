@@ -18,24 +18,29 @@ function getRandomURL() {
   getFetch(`random`)
 }
 
-function quoteSlideDown() {
+function quoteSlide() {
+  // quote display slides left/close
   document.querySelector('.quoteDisplay').classList.add('closeQuote');
-  document.querySelector('.textDisplay').classList.remove('fadeIn');
+  document.querySelector('.quote').classList.remove('fadeIn');
+  document.querySelector('.characterName').classList.remove('fadeIn');
 
-  
-  setTimeout(function() {
-    document.querySelector('.textDisplay').classList.add('fadeIn');
-  }, 1500)
+  // delay quote box appearance to time with photo
   setTimeout(function() {
     document.querySelector('.quoteDisplay').classList.remove('closeQuote');
   }, 1000)
+  // delay to allow quote box to appear before fading in quote text
+  setTimeout(function() {
+    document.querySelector('.quote').classList.add('fadeIn');
+    document.querySelector('.characterName').classList.add('fadeIn');
+  }, 1650)
+
 }
 
 // slide photo down
 function photoSlideDown() {
   document.querySelector('.characterMain img').classList.add('close');
 
-  // delay slide photo up
+  // delay slide photo up to allow for photo change
   setTimeout(function() {
     document.querySelector('.characterMain img').classList.remove('close')
   }, 800)
@@ -73,12 +78,13 @@ function getFetch(urlEnding){
       dataFetched = data
     }
 
+    // delay on DOM display to allow for photo change
     setTimeout(function() {
       // display quote and character name in DOM
       document.querySelector('.quote').innerText = `"${dataFetched.quote}"`
       document.querySelector('.characterName').innerText = `-${dataFetched.character}`
     
-      
+      // display character main photo
       document.querySelector('.characterMain > img').src = 
       dataFetched.character === 'Eleanor' ? `img/main-eleanor.png` :
       dataFetched.character === 'Chidi' ? `img/main-chidi.png` : 
@@ -88,13 +94,18 @@ function getFetch(urlEnding){
       dataFetched.character === 'Jason' ? `img/main-jason.png` :
       dataFetched.character === 'Pillboi' ? `img/main-pillboi.png` : 
       dataFetched.character === 'Derek' ? `img/main-derek.png` : ''
-
-      document.querySelector('.floating img').src = `img/shrimp.png`
       }, 600)
+      let currentCharacter
+      currentCharacter = dataFetched.character
+      console.log(dataFetched)
+      console.log(`lenght ${currentCharacter} =? ${dataFetched.character}`)
+      // console.log(dataFetched.prev())
 
-    // call slide photo down every time new quote is displayed + delayed slide photo up
+    // call slide photo down every time new character/quote is chosen
     photoSlideDown()
-    quoteSlideDown()
+    // call to close quote every time new character/quote is chosen
+    quoteSlide()
+
 
   })
   .catch(err => {
