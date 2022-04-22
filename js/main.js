@@ -51,10 +51,11 @@ function quoteSlide() {
 // slide photo down
 function photoSlideDown() {
   document.querySelector('.characterMain img').classList.add('close');
-
+  // document.querySelector('.characterMain img').classList.add('hidden');
   // delay slide photo up to allow for photo change
   setTimeout(function() {
     document.querySelector('.characterMain img').classList.remove('close')
+    document.querySelector('.characterMain img').classList.remove('hidden');
   }, 800)
 }
 

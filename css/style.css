@@ -22,6 +22,10 @@ body *, html * {
   padding: 0 0;
 }
 
+body, html {
+  max-height: 100vh;
+}
+
 .background {
   background-image: url("../img/clouds-and-grass.jpeg");
 }
@@ -39,6 +43,10 @@ body *, html * {
 .content {
   background-color: rgb(242, 239, 229);
 }
+
+/* .hidden {
+  display: none;
+} */
 
 
 /******************************************
@@ -85,6 +93,7 @@ body *, html * {
 .action * {
   font-size: .75rem;
   display: inline-block;
+  padding: 10px;
 }
 
 button {
