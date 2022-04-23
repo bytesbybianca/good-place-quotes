@@ -283,7 +283,7 @@ h1 {
     /* min-width: 20vw; */
     top: initial;
     left: initial;
-    right: 20%;
+    right: 10%;
     transition: all .7s; 
     transform: translate(0px, 0%);
   }
