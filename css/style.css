@@ -275,9 +275,25 @@ h1 {
   transform: translate(0px, 110%);
 }
 
+@media screen and (min-width: 1024px) {
 
+  .characterMain img {
 
-@media screen and (min-width: 2010px) {
+    /* min-height: 80vh; */
+    min-width: 20vw;
+    right: 0;
+    transition: all .7s; 
+    transform: translate(0px, 0%);
+  }
+
+  .characterMain .close {
+    transition: all .7s; 
+    transform: translate(0px, 110%);
+  }
+
+}
+
+@media screen and (min-width: 2010) {
 
   .characterMain img {
 
@@ -345,7 +361,7 @@ h1 {
   cursor: pointer;
 }
 
-@media screen and (min-width: 1900px) {
+@media screen and (min-width: 1024px) {
 
   .quoteDisplay * {
     letter-spacing: .125rem;
