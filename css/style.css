@@ -275,24 +275,16 @@ h1 {
   transform: translate(0px, 110%);
 }
 
-@media screen and (min-width: 1024px) {
+
+
+@media screen and (min-width: 2010px) {
 
   .characterMain img {
-    -webkit-filter:
-      drop-shadow(4px 4px 0 black)
-      drop-shadow(-4px -4px 0 white);
-    filter:
-      drop-shadow(4px 4px 0 black) 
-      drop-shadow(-4px -4px 0 white);
+
     min-height: 80vh;
-    /* min-width: 10vw; */
-    position: absolute;
     right: 20%;
-    bottom: 0;
     transition: all .7s; 
     transform: translate(0px, 0%);
-    /* max-width: 50vh; */
-
   }
 
   .characterMain .close {
@@ -353,7 +345,7 @@ h1 {
   cursor: pointer;
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1900px) {
 
   .quoteDisplay * {
     letter-spacing: .125rem;
