@@ -26,13 +26,14 @@ body, html {
   max-height: 100vh;
 }
 
-.background {
-  background-image: url("../img/clouds-and-grass.jpeg");
+.disable-scroll{
+  overflow-y: hidden;
 }
 
-@media screen and (min-width: 1900px) {
+@media screen and (min-width: 1024px) {
 
   .background {
+    background-image: url("../img/clouds-and-grass.jpeg");
     background-size: cover;
     background-position: 50vw;
     display: flex;
@@ -75,7 +76,8 @@ body, html {
   }
 }
 
-@media screen and (min-width: 1900px) {
+
+@media screen and (min-width: 1024px) {
   
   .content, .characterMain {
     width: 50vw;
@@ -124,7 +126,7 @@ button {
   gap: 5px;
 }
 
-@media screen and (min-width: 1900px) {
+@media screen and (min-width: 1024px) {
   .action, span {
     display: block;
     text-align: center;
@@ -178,7 +180,7 @@ button {
 
 
 
-@media screen and (min-width: 1900px) {
+@media screen and (min-width: 1024px) {
   .square span {
     font-size: 2rem;
   }
@@ -227,9 +229,9 @@ h1 {
   }
 }
 
-@media screen and (min-width: 1900px) {
+@media screen and (min-width: 1024px) {
   h1 {
-    font-size: 8rem;
+    font-size: 3rem;
   }
 
   .quote {
@@ -238,6 +240,12 @@ h1 {
   }
 
 
+}
+
+@media screen and (min-width: 2010px) {
+  h1 {
+    font-size: 8rem;
+  }
 }
 
 .characterMain {
@@ -267,7 +275,7 @@ h1 {
   transform: translate(0px, 110%);
 }
 
-@media screen and (min-width: 1900px) {
+@media screen and (min-width: 1024px) {
 
   .characterMain img {
     -webkit-filter:
@@ -329,7 +337,7 @@ h1 {
 
 .closeQuote {
   transition: all .7s; 
-  transform: translate(0px, 110%);
+  transform: translate(0px, 130%);
   /* width: 0px; */
   padding: 0;
   /* margin: 0; */
@@ -345,7 +353,7 @@ h1 {
   cursor: pointer;
 }
 
-@media screen and (min-width: 1900px) {
+@media screen and (min-width: 1024px) {
 
   .quoteDisplay * {
     letter-spacing: .125rem;
