@@ -279,9 +279,11 @@ h1 {
 
   .characterMain img {
 
-    /* min-height: 80vh; */
-    min-width: 20vw;
-    right: 0;
+    min-height: 80vh;
+    /* min-width: 20vw; */
+    top: initial;
+    left: initial;
+    right: 20%;
     transition: all .7s; 
     transform: translate(0px, 0%);
   }
@@ -293,11 +295,13 @@ h1 {
 
 }
 
-@media screen and (min-width: 2010) {
+@media screen and (min-width: 2010px) {
 
   .characterMain img {
 
     min-height: 80vh;
+    top: initial;
+    left: initial;
     right: 20%;
     transition: all .7s; 
     transform: translate(0px, 0%);
